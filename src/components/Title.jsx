@@ -1,7 +1,6 @@
 function Title(props) {
-  // const name = 'Sidiq';
-  // const role = 'Chief Everything Officer (CEO)';
-
+  props.meow?.();
+  
   return (
     <div
       style={{
@@ -11,8 +10,11 @@ function Title(props) {
         backgroundColor: 'burlywood',
       }}
     >
-      <p>{props.name}</p>
+      <p style={{ fontWeight: 'bold', fontSize: 40 }}>{props.name}</p>
       <p>{props.role}</p>
+      {
+        props.isManager && <p style={{ color: 'red' }}>Manager</p>
+      }
     </div>
   );
 }
